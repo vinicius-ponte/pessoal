@@ -211,7 +211,7 @@ module.exports = function (app: core.Express) {
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of species you require
+     *       description: The amount of species you requires
      *       type: string
      *       default: 10
      *     responses:
