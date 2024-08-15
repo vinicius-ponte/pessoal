@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ageddesi/Mocked-API.git"
+    "url": "git+https://github.com/vinicius-ponte/pessoal.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ageddesi/Mocked-API/issues"
+    "url": "https://github.com/vinicius-ponte/pessoal/issues"
   },
-  "homepage": "https://github.com/ageddesi/Mocked-API#readme",
+  "homepage": "https://github.com/vinicius-ponte/pessoal#readme",
   "devDependencies": {
     "all-contributors-cli": "^6.24.0"
   }

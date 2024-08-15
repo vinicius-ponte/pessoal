@@ -14,7 +14,7 @@ module.exports = function (app: core.Express) {
      *     summary: Obtain a USA address (by default)
      *     responses:
      *       '200':
-     *         description: An array of single address string
+     *         description: An array of single addresss string
      *         schema:
      *           type: array
      *           items:
