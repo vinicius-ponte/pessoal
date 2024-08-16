@@ -5,5 +5,4 @@ RUN npm config set strict-ssl false
 RUN npm install
 COPY . .
 EXPOSE 3000
-RUN npm config set unsafe-perm true 
 CMD ["npm", "run", "serve"]
