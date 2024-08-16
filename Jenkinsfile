@@ -25,7 +25,7 @@ pipeline {
                 script {
                     echo "Deploying to Kubernetes..."
                     withKubeConfig([credentialsId: 'kubeconfig']) {
-                        sh 'kubectl apply -f ./api/k8s/deployment.yaml'
+                        bat 'kubectl apply -f ./api/k8s/deployment.yaml'
                     }
                 }
             }
