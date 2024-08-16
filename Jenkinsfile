@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Image') {
+        stage ('Build Image') {
             steps {
                 script {
                     dockerapp = docker.build("viniciusponte/mocked-api:${env.BUILD_ID}", '-f ./api/Dockerfile ./api')
                 }
             }
         }      
-        stage('Push Image') {
+        stage ('Push Image') {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
@@ -19,5 +19,13 @@ pipeline {
                 }
             }
         }  
+
+        stage ('Deploy Kubernetes') {
+            steps {
+                withKubeConfig([credentialId: 'kubeconfig']) {
+                    sh 'kubectl apply -f ./api/k8s/deployment.yaml'
+                }
+            }
+        }
     }
 }
