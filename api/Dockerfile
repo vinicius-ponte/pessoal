@@ -4,5 +4,5 @@ COPY package.json package-lock.json /src/
 RUN npm config set strict-ssl false
 RUN npm install
 COPY . .
-EXPOSE 80
+EXPOSE 3000
 CMD ["npm", "run", "serve"]
