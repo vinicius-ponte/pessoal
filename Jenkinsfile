@@ -5,7 +5,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    dockerapp = docker.build("vinicius-ponte/mocked-api:${env.BUILD_ID}", '-f ./api/Dockerfile ./api')
+                    dockerapp = docker.build("viniciusponte/mocked-api:${env.BUILD_ID}", '-f ./api/Dockerfile ./api')
                 }
             }
         }      
