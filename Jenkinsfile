@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     echo "Deploying to Kubernetes..."
-                    withKubeConfig(caCertificate: '', clusterName: 'minikube', contextName: 'minikube', credentialsId:'rrrrr', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://172.19.48.251:8443') {
+                    withKubeConfig(caCertificate: '', clusterName: 'minikube', contextName: 'minikube', credentialsId:'minikube-jenkins-secret', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://172.19.48.251:8443') {
                         bat 'kubectl apply -f ./api/k8s/deployment.yaml'
                     }
                 }
